@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Campus Lost & Found Portal
 
-## Getting Started
+**Live Demo:** https://campus-lost-found-indol.vercel.app  
+**GitHub Repo:** https://github.com/PRATHEEK1659/campus-lost-found  
+**Demo Video:** [Add Loom/YouTube link here after recording]
 
-First, run the development server:
+## What this is
 
+A web application for college students to post lost and found items with photos, search and filter by category/type, claim items, and connect with each other to reunite lost belongings with their owners. Built with Instagram-level UX polish per the brief requirement.
+
+## How to run locally
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+   git clone https://github.com/PRATHEEK1659/campus-lost-found.git
+   cd campus-lost-found
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+   npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Create `.env.local` file with Supabase credentials:
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+NEXT_PUBLIC_SITE_URL=http://localhost:3000
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Run the development server:
+```bash
+   npm run dev
+```
 
-## Learn More
+5. Open http://localhost:3000
 
-To learn more about Next.js, take a look at the following resources:
+## Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Frontend:** Next.js 14 (App Router), TypeScript, Tailwind CSS - for fast development, built-in routing, and modern React patterns
+- **Backend:** Supabase (PostgreSQL + Auth + Storage) - complete backend in one SDK, zero API code needed
+- **Deployment:** Vercel - seamless Next.js deployment with auto-deploy from GitHub
+- **Icons:** Lucide React - lightweight, consistent icon set
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Key Features
 
-## Deploy on Vercel
+✅ **Post Lost/Found Items** with photo upload, category, location, and date  
+✅ **Browse & Search** with filters (All/Lost/Found) and text search  
+✅ **Claim System** - users can claim items with messages, owners approve/reject  
+✅ **Authentication** - email/password auth with session management  
+✅ **My Items Dashboard** - manage your posts, see claims, approve connections  
+✅ **Status Management** - mark items as resolved when reunited  
+✅ **Mobile Responsive** - works seamlessly on all devices  
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## What's NOT done
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Email notifications** - Planned for v2 when matches/claims occur
+- **Image similarity matching** - Would use perceptual hashing (pHash library) for automated matching suggestions
+- **In-app messaging** - Currently users approve claims and share contact info; real-time chat would enhance privacy
+- **Multiple image uploads** - Limited to one photo per item for MVP scope
+
+## In production, I would also add
+
+- **Rate limiting** on posting to prevent spam (using Upstash Redis)
+- **Image optimization** with sharp/next-image automatic compression
+- **Advanced search** with date range, distance radius, and combined filters
+- **Analytics dashboard** to track reunion success rates and user engagement
+- **Reporting system** for inappropriate content with admin moderation queue
+- **Push notifications** via Firebase Cloud Messaging for mobile users
