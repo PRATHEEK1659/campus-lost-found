@@ -65,3 +65,18 @@ NEXT_PUBLIC_SITE_URL=http://localhost:3000
 - **Analytics dashboard** to track reunion success rates and user engagement
 - **Reporting system** for inappropriate content with admin moderation queue
 - **Push notifications** via Firebase Cloud Messaging for mobile users
+
+## Troubleshooting
+
+**Build fails:**
+- Delete `node_modules` and `.next` folders
+- Run `npm install` again
+- Check Node version is 18+
+
+**Auth not working:**
+- Verify `.env.local` has correct Supabase credentials
+- Check Supabase redirect URLs include your domain
+
+**Images not uploading:**
+- Verify Supabase storage bucket `item-images` exists
+- Check bucket is set to public in Supabase dashboard
