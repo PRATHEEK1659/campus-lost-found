@@ -2,7 +2,7 @@
 
 **Live Demo:** https://campus-lost-found-indol.vercel.app  
 **GitHub Repo:** https://github.com/PRATHEEK1659/campus-lost-found  
-**Demo Video:** [Add Loom/YouTube link here after recording]
+**Demo Video:** [https://www.loom.com/share/7e07024d59e043a98dbd3dd8f28dcd38]
 
 ## What this is
 
